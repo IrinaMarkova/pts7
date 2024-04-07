@@ -44,6 +44,10 @@ class LauncherApp(tkinter.Tk):
         self.youtube_icon = self.youtube_icon.resize((35, 35))
         self.youtube_icon_tk = ImageTk.PhotoImage(self.youtube_icon)
 
+        self.github_icon = Image.open('images/github.png')
+        self.github_icon = self.github_icon.resize((35, 35))
+        self.github_icon_tk = ImageTk.PhotoImage(self.github_icon)
+
         
 
 
@@ -83,6 +87,9 @@ class LauncherApp(tkinter.Tk):
 
         youtube_button = self.create_button(text='Youtube', image=self.youtube_icon_tk, action=self.open_browser,
                                             action_args='https://youtube.com', row=4, column=0)
+
+        github_button = self.create_button(text='Github', image=self.github_icon_tk, action=self.open_browser,
+                                           action_args='https://github.com', row=4, column=1)
 
 
 
